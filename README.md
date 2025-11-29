@@ -8,6 +8,7 @@ O projeto controla usuários, fornecedores, produtos, vendas e estoque, garantin
 🚧 Em evolução / Refatorado com SOLID e separação de camadas
 
 🚀 Funcionalidades Principais
+
 👤 Usuários
 
 Cadastro e autenticação de usuários
