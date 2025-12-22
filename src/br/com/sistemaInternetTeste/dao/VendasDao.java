@@ -13,7 +13,7 @@ import java.util.List;
  */
 public class VendasDao implements VendasRepository {
 
-    private final List<Vendas> listaVendas = new ArrayList<>();
+    private static List<Vendas> listaVendas = new ArrayList<>();
 
     /**
      * Metodo resposavel por adicionar objetos em uma lista
@@ -28,9 +28,21 @@ public class VendasDao implements VendasRepository {
      * Metodo responsavel por listar os objetos de uma lista
      * @return Retorna uma lista
      */
-    @Override
-    public List<Vendas> listar() {
+    
+    public static List<Vendas> listar() {
         return listaVendas;
     }
+    
+    @Override
+    public double atualizarTotalGeral() {
+    double totalGeral = 0.0;
+
+    for (Vendas venda : VendasDao.listar()) {
+        totalGeral += venda.getValor() * venda.getQuantidade();
+    }
+
+    return totalGeral;
+}
+    
 }
 
