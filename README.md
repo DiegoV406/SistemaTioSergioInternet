@@ -5,7 +5,9 @@ O projeto controla usuários, fornecedores, produtos, vendas e estoque, garantin
 
 📌 Status do Projeto
 
-🚧 Em evolução / Refatorado com SOLID e separação de camadas
+🚧 Em evolução 
+✅ Refatorado com SOLID e separação de camadas
+🧪 Testes unitários implementados
 
 🚀 Funcionalidades Principais
 
@@ -37,6 +39,38 @@ Atualização de estoque automática
 
 Repositório em memória com possibilidade de expansão para banco
 
+🧪 Testes Unitários
+
+O projeto conta com testes unitários utilizando JUnit 4, garantindo a confiabilidade das regras de negócio e facilitando a manutenção do código.
+
+🎯 Objetivos dos Testes
+
+Validar cálculos e regras de negócio
+
+Garantir o correto funcionamento dos DAOs
+
+Evitar regressões após refatorações
+
+Facilitar futuras evoluções do sistema
+
+🧩 Exemplo de Teste Implementado
+
+Classe testada: VendasDao
+
+Método: atualizarTotalGeral()
+
+Cenário: Soma do valor total das vendas (valor × quantidade)
+
+✔ O teste verifica se o total geral é calculado corretamente com base nas vendas cadastradas em memória.
+
+🛠️ Ferramentas de Teste
+
+JUnit 4
+
+Projeto Ant (sem Maven)
+
+Execução via NetBeans
+
 🧠 Arquitetura e Padrões Aplicados
 
 A estrutura do projeto agora segue princípios SOLID:
@@ -56,10 +90,12 @@ Tecnologia
 🔌 JDBC	Conexão e transações com banco
 🖥️ Swing	Interface gráfica (GUI)
 🔐 MD5 / Hash Interface	Criptografia com possibilidade de novos algoritmos
+🧪 JUnit 4 / Testes unitários
+
 📌 Observação
 
 Este projeto foi criado com foco em organização, escalabilidade e manutenção, garantindo que novas funcionalidades possam ser adicionadas com facilidade.
-Agora com SOLID, o código está mais limpo, reutilizável e preparado para evoluções futuras.
+Com a aplicação dos princípios SOLID e testes unitários, o código está mais limpo, reutilizável e preparado para evoluções futuras.
 
 Feito com 💻 + ☕ por Diego Vieira
 
